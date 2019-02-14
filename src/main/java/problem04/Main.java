@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -14,7 +15,7 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 	Random rd = new Random();
-	int q = Math.abs((rd.nextInt()+9955 ) % 1000);
+	int q = Math.abs((rd.nextInt()+9955) % 1000);
 	Scanner sc = new Scanner(System.in);
 	int input = 100;
 	int ball = 0; int strike = 0; int out = 0; int cnt = 1;
@@ -85,7 +86,7 @@ public class Main {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	al.sort(null);
+	Collections.sort(al);
 	try {
 		fw = new FileWriter(file);
 		for(int i = 0; i<al.size(); i++)
